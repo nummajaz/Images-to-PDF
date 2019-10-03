@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity
         //check for welcome activity
         openWelcomeActivity();
     }
-
+        // position activity killed by memory(when you close app)
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity
             FileUtils.makeAndClearTemp();
         }
     }
-
+        // position activity reopen(when you open this app and open other and then back to this app)
     @Override
     protected void onResume() {
         super.onResume();
